@@ -74,3 +74,7 @@ const file = rfs('file.txt', 'utf8'); // Result<string, Error>
 ```
 
 Note that `resultify` also works with async functions. It will return a function that returns a `Promise<Result<T, E>>`.
+
+#### Working around `this` context issues
+
+If you need to use a method that relies on the `this` context, you should call `bind` appropriately or wrap the call in a lambda function.
