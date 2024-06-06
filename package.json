@@ -1,0 +1,23 @@
+{
+  "name": "@aurelle/result",
+  "version": "1.0.0",
+  "description": "Simple error handling library inspired by Rust's Result type",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build-only": "tsc --rootDir ./src --outDir dist",
+    "build-with-types": "run-p build-only emit",
+    "build": "npm-run-all clean build-with-types",
+    "emit": "tsc --rootDir ./src --emitDeclarationOnly --declaration --outDir dist"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  }
+}
